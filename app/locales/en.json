@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "flights": "Flights",
+    "hotels": "Hotels",
+    "visas": "Visas",
+    "tours": "Tours",
+    "about": "About"
+  },
+  "hero": {
+    "title": "All Travel Options... In One Place",
+    "subtitle": "Book flights, apply for visas, and explore travel services – all in one place"
+  },
+  "search": {
+    "flights": "Flights",
+    "hotels": "Hotels",
+    "visas": "Visas",
+    "groups": "Groups",
+    "transport": "Ground Transport",
+    "oneWay": "One Way",
+    "roundTrip": "Round Trip",
+    "multiCity": "Multi City",
+    "openReturn": "Open Return",
+    "from": "From",
+    "fromPlaceholder": "Departure from",
+    "to": "To",
+    "toPlaceholder": "Arrival to",
+    "departDate": "Departure Date",
+    "selectDate": "Select Date",
+    "passengers": "Passengers",
+    "defaultPassengers": "1 Passenger • Economy",
+    "searchNow": "Search Now"
+  },
+  "common": {
+    "applyNow": "Apply Now",
+    "bookNow": "Book Now",
+    "viewAll": "View All",
+    "priceFrom": "Price starts from",
+    "perPerson": "per person",
+    "contactWhatsapp": "Contact us on WhatsApp"
+  }
+}

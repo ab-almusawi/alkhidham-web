@@ -1,0 +1,44 @@
+# Paste into Portainer → Stacks → Add stack → Web editor.
+# Stack name: alkhidham
+#
+# Image is built by GitHub Actions and pulled from GHCR — do not build
+# on the server. After a workflow run:
+#   ghcr.io/ab-almusawi/alkhidham-web:release   (push to main)
+#   ghcr.io/ab-almusawi/alkhidham-web:dev       (push to develop)
+#
+# Package is private by default. In Portainer add a registry if needed:
+#   Registries → Add registry → Custom → ghcr.io
+#   username = ab-almusawi
+#   password = a PAT with read:packages (same CR_PAT family as other stacks)
+# Or make the package public: GitHub → Packages → alkhidham-web → Change visibility.
+#
+# Reachable via the host's existing Nginx Proxy Manager — this service only
+# `expose:`s port 80 (no published host ports). Connect NPM once:
+#   docker network connect alkhidham_default goovii-nginx-1
+#
+# NPM proxy host:
+#   Domain names:  clinora.site   www.clinora.site
+#   Forward to:    clinora-website : 80
+#   SSL:           Let's Encrypt (Force SSL on)
+#
+# Re-run `docker network connect` if goovii-nginx-1 is ever recreated.
+
+services:
+  website:
+    image: ghcr.io/ab-almusawi/alkhidham-web:release
+    restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - clinora-website
+    expose:
+      - "80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  default: {}

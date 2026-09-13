@@ -1,0 +1,15 @@
+node_modules
+.nuxt
+.output
+.data
+.nitro
+.cache
+dist
+.git
+.idea
+.DS_Store
+*.log
+identity.pdf
+.env
+.env.*
+!.env.example

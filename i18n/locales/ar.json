@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "flights": "الطيران",
+    "hotels": "الفنادق",
+    "visas": "التأشيرات",
+    "tours": "الكروبات",
+    "about": "من نحن"
+  },
+  "hero": {
+    "title": "كل خيــارات السفر... بمكان واحد",
+    "subtitle": "حجز رحلات الطيران، قدّم طلبات التأشيرة، واستكشف خدمات السفر – كل ذلك في مكان واحد"
+  },
+  "search": {
+    "flights": "الطيران",
+    "hotels": "الفنادق",
+    "visas": "التأشيرات",
+    "groups": "كروبات",
+    "transport": "النقل البري",
+    "oneWay": "ذهاب فقط",
+    "roundTrip": "ذهاب وعودة",
+    "multiCity": "مدن متعددة",
+    "openReturn": "عودة اوبن",
+    "from": "من",
+    "fromPlaceholder": "المغادرة من",
+    "to": "إلى",
+    "toPlaceholder": "الوصول إلى",
+    "departDate": "تاريخ المغادرة",
+    "selectDate": "اختر التاريخ",
+    "passengers": "عدد المسافرين",
+    "defaultPassengers": "1 مسافر • اقتصادي",
+    "searchNow": "البحث الآن"
+  },
+  "common": {
+    "applyNow": "قدّم الآن",
+    "bookNow": "احجز الآن",
+    "viewAll": "عرض الكل",
+    "priceFrom": "السعر يبدأ من",
+    "perPerson": "للشخص",
+    "contactWhatsapp": "تواصل معنا على واتساب"
+  }
+}

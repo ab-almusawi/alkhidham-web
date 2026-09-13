@@ -1,0 +1,26 @@
+# Local / host build of the clinora.site test site.
+#   docker compose up -d --build
+#
+# For Portainer on the production host, paste infra/portainer-stack.yml
+# (image-only) after building alkhidham-web:latest on that host.
+
+services:
+  website:
+    build: .
+    image: ghcr.io/ab-almusawi/alkhidham-web:release
+    restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - clinora-website
+    expose:
+      - "80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  default: {}
